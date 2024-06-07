@@ -47,7 +47,7 @@ router.post('/createuser', [
         // res.json(user);
         res.json(authtoken);
     } catch(error) {
-        console.log(error.message);
+        console.error(error.message);
         res.status(500).send("Internal server error");
     }
 })
@@ -85,7 +85,7 @@ router.post('/login', [
         res.json(authtoken);
 
     } catch(error){
-        console.log(error.message);
+        console.error(error.message);
         res.status(500).send("Internal server error");
     }
 })
